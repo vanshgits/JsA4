@@ -28,11 +28,12 @@ async function fetchData(event) {
             'X-RapidAPI-Host': 'food-recipes-with-images.p.rapidapi.com'
           }
     };
-
+// fetching data
     try {
         const response = await fetch(url, options);
 	    const result = await response.json();
         console.log(result);
+	    // Calling displayresult function
 	    displayResults(result);
     } catch (error) {
         console.error(error);
